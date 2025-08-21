@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add a recipie | African Recipes</title>
+    <meta name="description" content="Add your favorite African recipes and share them with the world.">
+    <meta name="keywords" content="African recipes, add recipe, share recipe, cooking, food">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="addrecipe.css">
+</head>
+
+<body>
+    <header class="main-header">
+        <div class="logo">
+            <img src="logo.svg" alt="African Recipes Logo">
+        </div>
+
+        <nav id="myLinks" class="nav-links">
+            <a href="Loginpage.html">Login</a>
+            <a href="Signuppage.html">Sign Up</a>
+            <a href="aboutus.html">About Us</a>
+            <a href="contactus.html">Contact Us</a>
+        </nav>
+
+        <a href="javascript:void(0);" class="icon" onclick="toggleNav()" id="menu-icon">
+            <i class="fas fa-bars"></i>
+        </a>      
+    </header>
+
+    <section class="add-recipe-section">
+
+        <div class="hero-gif">
+            <video autoplay loop muted playsinline >
+                <source src="./assets/videos/mygif.mp4" type="video/mp4">
+            </video>
+        </div>
+
+        <div class="hero-text">
+            <h1>Share Your Favorite African Recipe!</h1>
+            <p>Add your recipe and inspire others to explore the rich flavors of Africa.</p>
+        </div>
+        
+        <div class="form-container">
+            <form action="#" method="post" class="recipe-form" enctype="multipart/form-data">
+                <div class="form-header">
+
+                    <div class="upload-circle">
+                        <span id="placeholder">+</span>  
+                        <img id="preview" alt="preview">
+                        <input type="file" id="imageUpload" name="image" accept="image/*" required>
+                    </div>
+
+                    <div  id="recipeName">
+                        <label for="recipe-name">Recipe Name:</label>
+                        <input type="text" id="recipe-name" name="recipe-name" required>
+                    </div>
+                </div>
+
+                <div class="info">
+                    <label for="servings">Servings:</label>
+                    <input type="number" id="servings" name="servings" min="1" max="100" required>
+
+                    <label for="cooking-time">Cooking Time:</label>
+                    <input type="text" id="cooking-time" name="cooking-time" maxlength="50" 
+                        placeholder="e.g., 30 minutes" required>
+
+                    <label for="diff">Difficulty:</label>
+                    <select id="diff" name="difficulty" required>
+                        <option value="">Select Difficulty</option>
+                        <option value="easy">Easy</option>
+                        <option value="medium">Medium</option>
+                        <option value="hard">Hard</option>
+                    </select>
+                
+                    <label for="category">Category:</label>
+                    <select id="category" name="category" required>
+                            <option value="">Select Category</option>
+                            <option value="soup">Soup</option>
+                            <option value="stew">Stew</option>
+                            <option value="rice">Rice</option>
+                            <option value="dessert">Dessert</option>
+                            <option value="snack">Snack</option>
+                    </select>
+                </div>
+
+                <label for="description">Description:</label>
+                <textarea id="description" name="description" rows="4" maxlength="300" 
+                        placeholder="Write a brief description of the recipe..." required></textarea>
+
+                <label for="author">Chef Name:</label>
+                <input type="text" id="author" name="author" required>
+                
+                <label for="ingredients">Ingredients:</label>
+                <textarea id="ingredients" name="ingredients" rows="6" maxlength="1000" 
+                        placeholder="List all ingredients here..." required></textarea>
+
+                <label for="instructions">Instructions:</label>
+                <textarea id="instructions" name="instructions" rows="6" maxlength="2000" 
+                        placeholder="Step-by-step cooking instructions..." required></textarea>
+                
+                <button type="submit">
+                    Submit Recipe
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="section1">
+            <p class="footer1"> 
+                Explore Africa, </br>
+                One Taste Bud </br>
+                at a Time. 
+            </p> 
+        </div>
+
+        <div class="section2">
+             <p class="footer3"> Company </p>
+             <a class="a3" href="aboutus.html"  target="self"> About Us </a>
+             <a class="a3" href="contactus.html"  target="self"> Contact Us </a>
+             <a class="a3" href="https://docs.google.com/document/d/1-et3BkidrN1IFwqbuwbq15zFc7SotbiqUbLqcNxDS6s/edit?usp=sharing"  target="self">Terms and Conditions</a>
+            <a class="a3" href="https://docs.google.com/document/d/1uBP7E_n44H7aMnsK84cbf4pXkep8dDLQ/edit?usp=sharing&ouid=110801010579279232343&rtpof=true&sd=true"  target="self"> Privacy Policy </a>
+        </div>
+        
+        <div class="section3">
+            <p class="footer4">
+                Be The First to Know When a New <b>Recipe</b> is Added.
+            </p>
+            <form class="subscribe">
+                <input type="email" placeholder="Email" required />
+                <button type="submit"> 
+                    <i class="fas fa-paper-plane"></i> 
+                </button>
+            </form>
+        </div>
+
+        <div class="section4">
+            <p class="footer5"> © 2025 African Recipes. All rights reserved. </p>
+            <p class="footer6"> Made with ❤️ from Us </p>
+        </div>
+    </footer>
+    <script src="nav.js"></script>
+    <script src="imageUpload.js"></script>
+</body>
+</html>
